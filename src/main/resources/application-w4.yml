@@ -1,0 +1,14 @@
+# 4주차 부록: OSIV와 커넥션 풀
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 5
+      connection-timeout: 2000
+  jpa:
+    open-in-view: ${labs.osiv:true}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics

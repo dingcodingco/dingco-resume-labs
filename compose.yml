@@ -1,0 +1,19 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: labs-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: labs
+    ports:
+      - "13306:3306"
+    command: ["--innodb-buffer-pool-size=512M", "--max-connections=200"]
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-uroot", "-proot"]
+      interval: 3s
+      retries: 30
+  redis:
+    image: redis:7.4
+    container_name: labs-redis
+    ports:
+      - "16379:6379"

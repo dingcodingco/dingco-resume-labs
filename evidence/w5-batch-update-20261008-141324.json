@@ -1,0 +1,304 @@
+{
+  "lab": "w5-batch-update",
+  "startedAt": "2026-10-08T13:59:22.289120",
+  "java": "21.0.2",
+  "rows": [
+    {
+      "strategy": "A_dirty_checking",
+      "rows": 10000,
+      "chunk": 1000,
+      "elapsedMs": [
+        8247,
+        4121,
+        3635
+      ],
+      "medianMs": 4121,
+      "comUpdateDelta": 10000,
+      "questionsDelta": 10043,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "A2_dirty_checking_jdbc_batch",
+      "rows": 10000,
+      "chunk": 1000,
+      "elapsedMs": [
+        537,
+        433,
+        546
+      ],
+      "medianMs": 537,
+      "comUpdateDelta": 10000,
+      "questionsDelta": 10082,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "B_single_update",
+      "rows": 10000,
+      "chunk": 1000,
+      "elapsedMs": [
+        2625,
+        2990,
+        4979
+      ],
+      "medianMs": 2990,
+      "comUpdateDelta": 10000,
+      "questionsDelta": 10044,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "C_jdbc_batch_rewrite_on",
+      "rows": 10000,
+      "chunk": 500,
+      "elapsedMs": [
+        573,
+        882,
+        575
+      ],
+      "medianMs": 575,
+      "comUpdateDelta": 10000,
+      "questionsDelta": 10162,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "C_jdbc_batch_rewrite_on",
+      "rows": 10000,
+      "chunk": 1000,
+      "elapsedMs": [
+        807,
+        859,
+        1251
+      ],
+      "medianMs": 859,
+      "comUpdateDelta": 10000,
+      "questionsDelta": 10083,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "C_jdbc_batch_rewrite_on",
+      "rows": 10000,
+      "chunk": 2000,
+      "elapsedMs": [
+        1341,
+        1237,
+        816
+      ],
+      "medianMs": 1237,
+      "comUpdateDelta": 10000,
+      "questionsDelta": 10042,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "C2_jdbc_batch_rewrite_off",
+      "rows": 10000,
+      "chunk": 1000,
+      "elapsedMs": [
+        3711,
+        3366,
+        3991
+      ],
+      "medianMs": 3711,
+      "comUpdateDelta": 10000,
+      "questionsDelta": 10053,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "A_dirty_checking",
+      "rows": 50000,
+      "chunk": 1000,
+      "elapsedMs": [
+        16112,
+        14148,
+        16989
+      ],
+      "medianMs": 16112,
+      "comUpdateDelta": 50000,
+      "questionsDelta": 50208,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "A2_dirty_checking_jdbc_batch",
+      "rows": 50000,
+      "chunk": 1000,
+      "elapsedMs": [
+        10375,
+        3279,
+        2594
+      ],
+      "medianMs": 3279,
+      "comUpdateDelta": 50000,
+      "questionsDelta": 50403,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "B_single_update",
+      "rows": 50000,
+      "chunk": 1000,
+      "elapsedMs": [
+        19439,
+        13759,
+        18200
+      ],
+      "medianMs": 18200,
+      "comUpdateDelta": 50000,
+      "questionsDelta": 50208,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "C_jdbc_batch_rewrite_on",
+      "rows": 50000,
+      "chunk": 500,
+      "elapsedMs": [
+        3295,
+        2745,
+        2974
+      ],
+      "medianMs": 2974,
+      "comUpdateDelta": 50000,
+      "questionsDelta": 50803,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "C_jdbc_batch_rewrite_on",
+      "rows": 50000,
+      "chunk": 1000,
+      "elapsedMs": [
+        2982,
+        5685,
+        4544
+      ],
+      "medianMs": 4544,
+      "comUpdateDelta": 50000,
+      "questionsDelta": 50403,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "C_jdbc_batch_rewrite_on",
+      "rows": 50000,
+      "chunk": 2000,
+      "elapsedMs": [
+        5022,
+        5365,
+        3929
+      ],
+      "medianMs": 5022,
+      "comUpdateDelta": 50000,
+      "questionsDelta": 50204,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "C2_jdbc_batch_rewrite_off",
+      "rows": 50000,
+      "chunk": 1000,
+      "elapsedMs": [
+        35494,
+        64119,
+        64661
+      ],
+      "medianMs": 64119,
+      "comUpdateDelta": 50000,
+      "questionsDelta": 50273,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "A_dirty_checking",
+      "rows": 100000,
+      "chunk": 1000,
+      "elapsedMs": [
+        53936,
+        58160,
+        42285
+      ],
+      "medianMs": 53936,
+      "comUpdateDelta": 100000,
+      "questionsDelta": 100416,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "A2_dirty_checking_jdbc_batch",
+      "rows": 100000,
+      "chunk": 1000,
+      "elapsedMs": [
+        9054,
+        6189,
+        6419
+      ],
+      "medianMs": 6419,
+      "comUpdateDelta": 100000,
+      "questionsDelta": 100804,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "B_single_update",
+      "rows": 100000,
+      "chunk": 1000,
+      "elapsedMs": [
+        39185,
+        48836,
+        39044
+      ],
+      "medianMs": 39185,
+      "comUpdateDelta": 100000,
+      "questionsDelta": 100414,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "C_jdbc_batch_rewrite_on",
+      "rows": 100000,
+      "chunk": 500,
+      "elapsedMs": [
+        5068,
+        5128,
+        6199
+      ],
+      "medianMs": 5128,
+      "comUpdateDelta": 100000,
+      "questionsDelta": 101604,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "C_jdbc_batch_rewrite_on",
+      "rows": 100000,
+      "chunk": 1000,
+      "elapsedMs": [
+        5341,
+        5189,
+        5726
+      ],
+      "medianMs": 5341,
+      "comUpdateDelta": 100000,
+      "questionsDelta": 100804,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "C_jdbc_batch_rewrite_on",
+      "rows": 100000,
+      "chunk": 2000,
+      "elapsedMs": [
+        4332,
+        5763,
+        4890
+      ],
+      "medianMs": 4890,
+      "comUpdateDelta": 100000,
+      "questionsDelta": 100404,
+      "sumConsistent": true
+    },
+    {
+      "strategy": "C2_jdbc_batch_rewrite_off",
+      "rows": 100000,
+      "chunk": 1000,
+      "elapsedMs": [
+        39859,
+        30068,
+        25759
+      ],
+      "medianMs": 30068,
+      "comUpdateDelta": 100000,
+      "questionsDelta": 100511,
+      "sumConsistent": true
+    }
+  ],
+  "mysql": "8.4.11",
+  "updateSql": "UPDATE user_point SET point = ?, updated_at = ? WHERE id = ?",
+  "finishedAt": "2026-10-08T14:13:24.094443"
+}

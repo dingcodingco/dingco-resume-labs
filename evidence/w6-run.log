@@ -1,0 +1,14 @@
+2026-10-08T14:18:16.502+09:00  INFO 82194 --- [           main] com.dingco.labs.LabsApplication          : Starting LabsApplication v0.1.0 using Java 21.0.2 with PID 82194 (~/dingco-resume-labs/build/libs/dingco-resume-labs-0.1.0.jar started by user in ~/dingco-resume-labs)
+2026-10-08T14:18:16.504+09:00  INFO 82194 --- [           main] com.dingco.labs.LabsApplication          : The following 1 profile is active: "w6"
+2026-10-08T14:18:19.316+09:00  WARN 82194 --- [           main] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2026-10-08T14:18:19.805+09:00  INFO 82194 --- [           main] com.dingco.labs.LabsApplication          : Started LabsApplication in 3.611 seconds (process running for 3.984)
+[w6-redis-pipeline] {kind=plan, rows=100000, groupByPlan=[{table=o, type=ALL, rows=99940, extra=Using temporary}, {table=p, type=eq_ref, rows=1, extra=null}]}
+[w6-redis-pipeline] {kind=aggregate, method=A_db_group_by, rows=100000, elapsedMs=[170, 168, 163], medianMs=168, lastRunDbReadMs=0, lastRunRedisMs=0, redisUsedMemoryDeltaBytes=0, statisticRows=7300, matchesGroupByResult=true}
+[w6-redis-pipeline] {kind=aggregate, method=B_redis_pipeline, rows=100000, elapsedMs=[2874, 2099, 2106], medianMs=2106, lastRunDbReadMs=241, lastRunRedisMs=1752, redisUsedMemoryDeltaBytes=413472, statisticRows=7300, matchesGroupByResult=true}
+[w6-redis-pipeline] {kind=aggregate, method=B0_redis_one_by_one, rows=100000, elapsedMs=[45288, 41433, 44459], medianMs=44459, lastRunDbReadMs=364, lastRunRedisMs=43999, redisUsedMemoryDeltaBytes=413472, statisticRows=7300, matchesGroupByResult=true}
+[w6-redis-pipeline] {kind=incremental, rows=100000, newOrders=1000, A_full_group_by_ms=[180, 176, 179], A_medianMs=179, B_redis_incremental_ms=[222, 230, 217], B_medianMs=222, matchesGroupByResult=true}
+[w6-redis-pipeline] {kind=plan, rows=500000, groupByPlan=[{table=o, type=ALL, rows=498385, extra=Using temporary}, {table=p, type=eq_ref, rows=1, extra=null}]}
+[w6-redis-pipeline] {kind=aggregate, method=A_db_group_by, rows=500000, elapsedMs=[1425, 824, 742], medianMs=824, lastRunDbReadMs=0, lastRunRedisMs=0, redisUsedMemoryDeltaBytes=0, statisticRows=7300, matchesGroupByResult=true}
+[w6-redis-pipeline] {kind=aggregate, method=B_redis_pipeline, rows=500000, elapsedMs=[10275, 9922, 9511], medianMs=9922, lastRunDbReadMs=1204, lastRunRedisMs=7758, redisUsedMemoryDeltaBytes=413472, statisticRows=7300, matchesGroupByResult=true}
+[w6-redis-pipeline] {kind=incremental, rows=500000, newOrders=1000, A_full_group_by_ms=[700, 859, 862], A_medianMs=859, B_redis_incremental_ms=[206, 222, 207], B_medianMs=207, matchesGroupByResult=true}
+[w6-redis-pipeline] evidence saved: evidence/w6-redis-pipeline-20261008-142200.json

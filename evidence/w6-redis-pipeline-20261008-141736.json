@@ -1,0 +1,128 @@
+{
+  "lab": "w6-redis-pipeline",
+  "startedAt": "2026-10-08T14:14:01.939831",
+  "java": "21.0.2",
+  "rows": [
+    {
+      "kind": "plan",
+      "rows": 100000,
+      "groupByPlan": [
+        {
+          "table": "o",
+          "type": "ALL",
+          "rows": 99940,
+          "extra": "Using temporary"
+        },
+        {
+          "table": "p",
+          "type": "eq_ref",
+          "rows": 1,
+          "extra": null
+        }
+      ]
+    },
+    {
+      "kind": "aggregate",
+      "method": "A_db_group_by",
+      "rows": 100000,
+      "elapsedMs": [
+        583,
+        245,
+        223
+      ],
+      "medianMs": 245,
+      "lastRunDbReadMs": 0,
+      "lastRunRedisMs": 0,
+      "redisUsedMemoryDeltaBytes": 0,
+      "statisticRows": 7300,
+      "matchesGroupByResult": true
+    },
+    {
+      "kind": "aggregate",
+      "method": "B_redis_pipeline",
+      "rows": 100000,
+      "elapsedMs": [
+        5369,
+        4044,
+        3276
+      ],
+      "medianMs": 4044,
+      "lastRunDbReadMs": 399,
+      "lastRunRedisMs": 2772,
+      "redisUsedMemoryDeltaBytes": 414312,
+      "statisticRows": 7300,
+      "matchesGroupByResult": true
+    },
+    {
+      "kind": "aggregate",
+      "method": "B0_redis_one_by_one",
+      "rows": 100000,
+      "elapsedMs": [
+        60864,
+        48885,
+        45919
+      ],
+      "medianMs": 48885,
+      "lastRunDbReadMs": 299,
+      "lastRunRedisMs": 45518,
+      "redisUsedMemoryDeltaBytes": 413472,
+      "statisticRows": 7300,
+      "matchesGroupByResult": true
+    },
+    {
+      "kind": "plan",
+      "rows": 500000,
+      "groupByPlan": [
+        {
+          "table": "o",
+          "type": "ALL",
+          "rows": 498385,
+          "extra": "Using temporary"
+        },
+        {
+          "table": "p",
+          "type": "eq_ref",
+          "rows": 1,
+          "extra": null
+        }
+      ]
+    },
+    {
+      "kind": "aggregate",
+      "method": "A_db_group_by",
+      "rows": 500000,
+      "elapsedMs": [
+        1010,
+        839,
+        727
+      ],
+      "medianMs": 839,
+      "lastRunDbReadMs": 0,
+      "lastRunRedisMs": 0,
+      "redisUsedMemoryDeltaBytes": 0,
+      "statisticRows": 7300,
+      "matchesGroupByResult": true
+    },
+    {
+      "kind": "aggregate",
+      "method": "B_redis_pipeline",
+      "rows": 500000,
+      "elapsedMs": [
+        11815,
+        10910,
+        12289
+      ],
+      "medianMs": 11815,
+      "lastRunDbReadMs": 1696,
+      "lastRunRedisMs": 10052,
+      "redisUsedMemoryDeltaBytes": 413752,
+      "statisticRows": 7300,
+      "matchesGroupByResult": true
+    }
+  ],
+  "mysql": "8.4.11",
+  "redis": "7.4.11",
+  "groupBySql": "SELECT o.order_date, p.category, COUNT(*) AS order_count, SUM(o.amount) AS total_amount\nFROM orders o\nJOIN products p ON p.id = o.product_id\nGROUP BY o.order_date, p.category",
+  "chunkSql": "SELECT o.id, o.order_date, p.category, o.amount\nFROM orders o\nJOIN products p ON p.id = o.product_id\nWHERE o.id > ?\nORDER BY o.id\nLIMIT ?",
+  "finishedAt": "2026-10-08T14:17:36.788014"
+}

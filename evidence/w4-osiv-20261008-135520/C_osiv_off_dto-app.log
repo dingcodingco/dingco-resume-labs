@@ -1,0 +1,5 @@
+2026-10-08T13:57:28.779+09:00  INFO 35117 --- [           main] com.dingco.labs.LabsApplication          : Starting LabsApplication v0.1.0 using Java 21.0.2 with PID 35117 (~/dingco-resume-labs/build/libs/dingco-resume-labs-0.1.0.jar started by user in ~/dingco-resume-labs)
+2026-10-08T13:57:28.782+09:00  INFO 35117 --- [           main] com.dingco.labs.LabsApplication          : The following 1 profile is active: "w4"
+2026-10-08T13:57:32.362+09:00  WARN 35117 --- [           main] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2026-10-08T13:57:32.735+09:00  INFO 35117 --- [           main] com.dingco.labs.LabsApplication          : Started LabsApplication in 4.274 seconds (process running for 4.645)
+[w4] ready: payments=1000
